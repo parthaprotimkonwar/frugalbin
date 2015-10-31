@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="myApp">
+<html lang="en" data-ng-app="frugalBin">
 <head>
   <meta charset="utf-8">
   <title>Frugal Bin</title>
@@ -7,21 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="frugalBin.css">
 </head>
-<body data-ng-init="names=['abc','def']">
-  <div ng-include="'common/headers'"></div>
-  <input ng-model="name" type="text" placeholder="Your name">
-  <h1>Hello {{ name }}</h1>
-  
-  <ul >
-	<li data-ng-repeat="named in names">{{ named }}</li>
-  </ul>
+
+
+<body>
+
+  <div ng-include src="'common/header.html'"></div>
+  <p>*****************************************************************************************</p>
+
+  <div ng-view=""></div>
+
+  <p>*****************************************************************************************</p>
+  <div ng-include src="'common/footer.html'"></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
   <script src="../lib/js/angularJS/angular.min.js"></script>
   <script src="../lib/js/angularJS/angular-route.min.js"></script>
+
   <script src="frugalBin.js"></script>
+
+  <script src="common/header.js"></script>
+  <script src="common/footer.js"></script>
+
+  <script src="inventories/inventoryList.js"></script>
 <!--  
   <script
           src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.js">
