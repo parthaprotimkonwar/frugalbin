@@ -1,8 +1,8 @@
 <!-- use ch(common_header) before each names -->
 <div ng-controller="ch_LoginController">
-<p ng-init="login=true;logout=false">Header</p>
+<p ng-init="isLoggedIn=false">Header</p>
     <a ng-href="#inventoryList">List</a>
 
-    <div ng-show="login"><a ng-click="changeLogin()" href="#">Login</a></div>
-    <div ng-show="logout"><a ng-click="changeLogin()" href="#">Logout</a></div>
+    <div ng-show="!isLoggedIn"><a ng-click="changeLoginStatus()" href>Login</a></div>
+    <div ng-show="isLoggedIn"><a ng-click="changeLoginStatus()" href>Logout</a></div>
 </div>
