@@ -19,26 +19,31 @@
   <p>*****************************************************************************************</p>
   <div ng-include src="'common/pages/footer.html'"></div>
 
+
+  <!--****************************************************************************************-->
+  <!--Include Javascripts-->
+
+  <!--LIB JS-->
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.js"></script>-->
   <script src="../lib/js/angularJS/angular.min.js"></script>
   <script src="../lib/js/angularJS/angular-route.min.js"></script>
 
+  <!--PROJECT JS-->
   <script src="frugalBin.js"></script>
 
-  <script src="common/pages/header.js"></script>
-  <script src="common/pages/footer.js"></script>
+  <script src="common/constants/otherConstants.js"></script>
+  <script src="common/constants/paramConstants.js"></script>
+  <script src="common/constants/urlConstants.js"></script>
 
+  <script src="common/pages/footer.js"></script>
+  <script src="common/pages/header.js"></script>
+
+  <script src="common/services/httpService.js"></script>
   <script src="common/services/urlCreatorService.js"></script>
 
-  <script src="common/constants/paramConstants.js"></script>
-  <script src="common/constants/otherConstants.js"></script>
-
   <script src="inventories/inventoryList.js"></script>
-<!--  
-  <script
-          src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.js">
-  </script>-->
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 var frugalBinModule = angular.module('frugalBin',
-    ['ngRoute',
-        'header',
+    ['header',
         'inventoryList',
+        'ngRoute',
         'frugalBin1',
         'frugalBin2',
         'frugalBin3']);
