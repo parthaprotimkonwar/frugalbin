@@ -5,4 +5,24 @@
     <ul>
         <li data-ng-repeat="inventory in inventories">{{ inventory }}</li>
     </ul>
+
+    <ng-form>
+        <button ng-click="refresh()">Refresh</button>
+        <input ng-model="url" type="text" placeholder="URL" required>
+        <input ng-model="param" type="text" placeholder="Param" required>
+        <input ng-model="value" type="text" placeholder="value" required>
+        <button ng-click="addParam()">Add Param</button>
+    </ng-form>
+    <h2>Final Url: {{ finalurl }}</h2>
+
+
+
+    <input type="text" ng-model="name" placeholder="name" />
+    <button ng-click="clickMe()">Click Me!</button>
+
+    <p>{{ count }}</p>
+    <p>{{name}} : {{ finalname }}</p>
 </div>
+
+
+

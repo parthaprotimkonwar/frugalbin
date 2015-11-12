@@ -11,13 +11,13 @@
 
 <body>
 
-  <div ng-include src="'common/header.html'"></div>
+  <div ng-include src="'common/pages/header.html'"></div>
   <p>*****************************************************************************************</p>
 
   <div ng-view=""></div>
 
   <p>*****************************************************************************************</p>
-  <div ng-include src="'common/footer.html'"></div>
+  <div ng-include src="'common/pages/footer.html'"></div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
@@ -27,8 +27,13 @@
 
   <script src="frugalBin.js"></script>
 
-  <script src="common/header.js"></script>
-  <script src="common/footer.js"></script>
+  <script src="common/pages/header.js"></script>
+  <script src="common/pages/footer.js"></script>
+
+  <script src="common/services/urlCreatorService.js"></script>
+
+  <script src="common/constants/paramConstants.js"></script>
+  <script src="common/constants/otherConstants.js"></script>
 
   <script src="inventories/inventoryList.js"></script>
 <!--  

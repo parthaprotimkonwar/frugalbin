@@ -1,11 +1,19 @@
-var frugalBinModule = angular.module('frugalBin', ['ngRoute','header', 'inventoryList']);
+var frugalBinModule = angular.module('frugalBin',
+    ['ngRoute',
+        'header',
+        'inventoryList',
+        'frugalBin1',
+        'frugalBin2',
+        'frugalBin3']);
 
-frugalBinModule.config(['$routeProvider', function($routeProvider){
+frugalBinModule.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/inventoryList', {
-            templateUrl:'inventories/inventoryList.html'
+            templateUrl: 'inventories/inventoryList.html',
+            controller: 'inventoryListController'
         });
 }])
-    .run(function ($rootScope){
-        $rootScope.endPoint = 'http://localhost:8080'
-    });
+.run(function ($rootScope, otherConstants) {
+    $rootScope.endPoint = otherConstants.tempUrl;
+    $rootScope.dataType = otherConstants.dummyData;
+});
